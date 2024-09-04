@@ -1,4 +1,4 @@
-# Play.Catalog
+# Play.Identity
 Common libraries used by Play Economy services.
 
 ## Create and publish package
