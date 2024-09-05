@@ -12,3 +12,11 @@ dotnet pack src\$name\ --configuration Release -p:PackageVersion=$version -p:Rep
 
 dotnet nuget push ..\packages\$name.$version.nupkg --api-key $gh_pat --source "github"
 ```
+
+## Build the docker image
+```powershell
+$env:GH_OWNER="alvperagu-dotnet"
+$env:GH_PAT ="[PAT HERE]"
+
+docker build --secret id=GH_OWNER --secret id=GH_PAT -t play.identity:$version .
+```
